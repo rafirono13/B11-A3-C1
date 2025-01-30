@@ -4,6 +4,126 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pet Shop</title>
+    <!-- tailwind and Daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.5/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font section -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icon section  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- style section -->
+    <style>
+      :root {
+        --accent-color: #ffdc26;
+      }
+      .adlam-font {
+        font-family: "ADLaM Display", serif;
+      }
+      .sora-font {
+        font-family: "Sora", serif;
+      }
+    </style>
   </head>
-  <body></body>
+  <body class="adlam-font">
+    <header>
+      <!-- !navbar section -->
+      <section class="bg-[#FFF9F4]">
+        <nav class="md:container mx-auto">
+          <div
+            class="navbar border-b-2 md:border-b-0 border-solid border-[var(--accent-color)]"
+          >
+            <div class="navbar sm:flex flex-row-reverse justify-between">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16"
+                    />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                >
+                  <li><a>Find a pet</a></li>
+                  <li><a>Breeds</a></li>
+                  <li><a>Contact us</a></li>
+                </ul>
+              </div>
+              <div class="flex">
+                <img
+                  class="lg:mr-2 w-10"
+                  src="c1-assets/logo-header.png"
+                  alt=""
+                />
+                <div class="sm:flex hidden">
+                  <a class="text-[1.625rem] sora-font font-semibold"
+                    >Browse<span
+                      class="text-[var(--accent-color)] sora-font font-normal"
+                      >4</span
+                    >Pets</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1 sora-font text-[1.25rem]">
+                <li><a>Find a pet</a></li>
+                <li><a>Breeds</a></li>
+                <li><a>Contact us</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end space-x-2 sora-font sm:flex hidden">
+              <div class="flex items-center gap-4 mr-4">
+                <i
+                  class="fa-regular fa-bell hover:text-[#e76f51] cursor-pointer text-xl"
+                ></i>
+                <i
+                  class="fa-solid fa-magnifying-glass hover:text-[#e76f51] cursor-pointer text-xl"
+                ></i>
+              </div>
+              <a
+                class="btn btn-outline btn-warning text-black border-[var(--accent-color)]"
+                >Login</a
+              >
+              <a class="btn bg-[var(--accent-color)]">Register</a>
+            </div>
+          </div>
+        </nav>
+      </section>
+      <!-- !navbar section end -->
+    </header>
+    <main></main>
+    <footer></footer>
+  </body>
 </html>
