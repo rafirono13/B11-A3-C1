@@ -36,6 +36,7 @@
     <style>
       :root {
         --accent-color: #ffdc26;
+        --bg-color: rgba(255, 220, 38, 0.5);
       }
       .adlam-font {
         font-family: "ADLaM Display", serif;
@@ -334,7 +335,7 @@
     </header>
     <main>
       <!-- !Price section -->
-      <section class="md:container mx-auto mb-20 md:px-3">
+      <section class="md:container mx-auto mb-36 md:px-3">
         <h1 class="adlam-font text-[2.25rem] mb-12">Everyday low price</h1>
         <div class="flex flex-wrap px-6 lg:px-0 gap-6">
           <!-- Offer-one -->
@@ -375,7 +376,88 @@
         </div>
       </section>
       <!-- !price section -->
+
+      <!-- !News section -->
+      <section class="md:container mx-auto md:px-3">
+        <div
+          class="flex justify-between items-center bg-[#FFF9F4] lg:px-56 rounded-2xl py-10"
+        >
+          <!-- Image -->
+          <div>
+            <img src="c1-assets/cute-pet-mid.png" alt="" />
+          </div>
+          <!-- Text -->
+          <div>
+            <h3 class="text-[2rem] lg:text-[2.25rem] mb-5">
+              Get Pawsome News!
+            </h3>
+            <p class="text-[1.15rem] sora-font mb-7">
+              Exclusive training tips, ticks, product deals and more.
+            </p>
+            <input
+              type="text"
+              placeholder="Enter email..."
+              class="input sora-font"
+            />
+            <br />
+            <button
+              class="btn bg-[var(--accent-color)] sora-font font-[300] mt-8 text-[1.25rem]"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- !News section -->
     </main>
-    <footer></footer>
+    <footer class="bg-[var(--bg-color)]">
+      <section class="md:container mx-auto md:px-3">
+        <!-- Mother -->
+        <div class="pt-92 pb-36 flex justify-between items-center">
+          <!-- !Childs -->
+          <!-- Brand -->
+          <div class="w-426px">
+            <div class="flex items-center gap-2">
+              <!-- Logo -->
+              <div>
+                <img src="c1-assets/logo-footer.png" alt="" />
+              </div>
+              <div>
+                <p class="text-[1.6rem] sora-font">
+                  Browse<span class="text-[var(--accent-color)]">4</span>Pets
+                </p>
+              </div>
+            </div>
+            <div class="mt-7 text-gray-700">
+              Discover a world of treats, toys, and essentials handpicked for
+              <br />
+              your furry friends
+            </div>
+          </div>
+          <!-- Links -->
+          <div>
+            <div>
+              <ul
+                class="flex-col sora-font text-[1.25rem] space-y-5 cursor-pointer"
+              >
+                <li>Find a pet</li>
+                <li>Breeds</li>
+                <li>Contact us</li>
+              </ul>
+            </div>
+          </div>
+          <!-- socials -->
+          <div>
+            <h3 class="text-base font-medium mb-6">Follow Us</h3>
+            <div class="flex gap-5 cursor-pointer">
+              <i class="fa-brands text-2xl fa-facebook"></i>
+              <i class="fa-brands text-2xl fa-instagram"></i>
+              <i class="fa-brands text-2xl fa-linkedin"></i>
+              <i class="fa-brands text-2xl fa-youtube"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
