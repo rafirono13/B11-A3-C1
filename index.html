@@ -43,19 +43,50 @@
       .sora-font {
         font-family: "Sora", serif;
       }
+
+      /* animation section */
+
+      @keyframes wave-flow {
+        0%,
+        100% {
+          background-position: 100% 50%;
+          opacity: 0.95;
+        }
+        50% {
+          background-position: 0% 50%;
+          opacity: 1;
+        }
+      }
+
+      .animate-wave {
+        background: linear-gradient(to right, #fde469 45%, #ffdc26 65%);
+
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        background-size: 300% 100%;
+        animation: wave-flow 10s linear infinite;
+        padding-bottom: 6px;
+        line-height: 1.25;
+        display: inline-block;
+      }
     </style>
   </head>
-  <body class="adlam-font">
+  <body class="adlam-font m-0 p-0 overflow-x-hidden">
     <header>
       <!-- !navbar section -->
-      <section class="bg-[#FFF9F4]">
+      <section class="bg-[#FFF9F4] mb-20">
         <nav class="md:container mx-auto">
           <div
             class="navbar border-b-2 md:border-b-0 border-solid border-[var(--accent-color)]"
           >
             <div class="navbar sm:flex flex-row-reverse justify-between">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <div class="dropdown dropdown-end">
+                <div
+                  tabindex="0"
+                  role="button"
+                  class="btn btn-ghost lg:hidden md:hidden"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-5 w-5"
@@ -82,12 +113,12 @@
               </div>
               <div class="flex">
                 <img
-                  class="lg:mr-2 w-10"
+                  class="lg:mr-2 md:mr-2"
                   src="c1-assets/logo-header.png"
                   alt=""
                 />
                 <div class="sm:flex hidden">
-                  <a class="text-[1.625rem] sora-font font-semibold"
+                  <a class="text-[1.625rem] sora-font font-semibold pt-2"
                     >Browse<span
                       class="text-[var(--accent-color)] sora-font font-normal"
                       >4</span
@@ -96,7 +127,7 @@
                 </div>
               </div>
             </div>
-            <div class="navbar-center hidden lg:flex">
+            <div class="navbar-center hidden lg:flex pr-60">
               <ul class="menu menu-horizontal px-1 sora-font text-[1.25rem]">
                 <li><a>Find a pet</a></li>
                 <li><a>Breeds</a></li>
@@ -122,6 +153,184 @@
         </nav>
       </section>
       <!-- !navbar section end -->
+      <!-- !Banner section -->
+      <section class="md:container mx-auto mb-20 md:px-3 lg:mb-36">
+        <div
+          class="bg-none lg:bg-[url(c1-assets/cat-big.png)] bg-no-repeat bg-auto bg-center w-full lg:h-[750px]"
+        >
+          <div class="">
+            <!-- text section -->
+            <div class="pt-5 px-5 md:px-0">
+              <h1
+                class="mb-5 text-3xl md:text-6xl font-bold adlam-font animate-wave"
+              >
+                Pamper Your Pet, <br />
+                Because They Deserve the Bes
+              </h1>
+              <p class="mb-5 text-gray-500 font-normal sora-font">
+                Discover a world of treats, toys, and essentials handpicked for
+                <br />
+                your furry friends. Shop now and make tails wag with joy!
+              </p>
+              <button
+                class="btn bg-[var(--accent-color)] text-gray-800 sora-font font-bold md:w-36"
+              >
+                Find a cat
+              </button>
+            </div>
+            <!-- Image (mobile/tablet only) -->
+            <img
+              src="c1-assets/cat-big.png"
+              class="lg:hidden mt-8"
+              alt="Happy cat"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- !Banner section -->
+
+      <!-- !Browse Categories -->
+      <section class="md:container mx-auto mb-20 md:px-3">
+        <h1 class="adlam-font text-4xl mb-12">Browse By Categories</h1>
+
+        <!-- !\\Card section\\ -->
+        <div class="flex flex-wrap justify-evenly gap-4 overflow-x-hidden">
+          <!-- card-1 -->
+          <div
+            class="card bg-[#F9DF8A] w-[200px] h-[255px] shadow-sm rounded-2xl overflow-x-hidden relative"
+          >
+            <div
+              class="card-body flex flex-col items-center justify-center p-8"
+            >
+              <!-- image container -->
+              <div class="rounded-full bg-white">
+                <img
+                  class="w-full h-full p-5 object-contain"
+                  src="c1-assets/dog-cartoon.png"
+                  alt="Dog Cartoon"
+                />
+              </div>
+              <!-- text -->
+              <h4 class="card-title text-[1.25rem] mb-1 items-center mt-5 mr-1">
+                Dog
+              </h4>
+              <p class="sora-font items-center">3 items</p>
+            </div>
+          </div>
+          <!-- card-2 -->
+          <div
+            class="card bg-[#F9DF8A] w-[200px] h-[255px] shadow-sm rounded-2xl overflow-x-hidden relative"
+          >
+            <div
+              class="card-body flex flex-col items-center justify-center p-8"
+            >
+              <!-- image container -->
+              <div class="rounded-full bg-white">
+                <img
+                  class="w-full h-full p-5 object-contain"
+                  src="c1-assets/dog-cartoon.png"
+                  alt="Dog Cartoon"
+                />
+              </div>
+              <!-- text -->
+              <h4 class="card-title text-[1.25rem] mb-1 items-center mt-5 mr-1">
+                Dog
+              </h4>
+              <p class="sora-font items-center">3 items</p>
+            </div>
+          </div>
+          <!-- card-3 -->
+          <div
+            class="card bg-[#F9DF8A] w-[200px] h-[255px] shadow-sm rounded-2xl overflow-x-hidden relative"
+          >
+            <div
+              class="card-body flex flex-col items-center justify-center p-8"
+            >
+              <!-- image container -->
+              <div class="rounded-full bg-white">
+                <img
+                  class="w-full h-full p-5 object-contain"
+                  src="c1-assets/dog-cartoon.png"
+                  alt="Dog Cartoon"
+                />
+              </div>
+              <!-- text -->
+              <h4 class="card-title text-[1.25rem] mb-1 items-center mt-5 mr-1">
+                Dog
+              </h4>
+              <p class="sora-font items-center">3 items</p>
+            </div>
+          </div>
+          <!-- card-4 -->
+          <div
+            class="card bg-[#F9DF8A] w-[200px] h-[255px] shadow-sm rounded-2xl overflow-x-hidden relative"
+          >
+            <div
+              class="card-body flex flex-col items-center justify-center p-8"
+            >
+              <!-- image container -->
+              <div class="rounded-full bg-white">
+                <img
+                  class="w-full h-full p-5 object-contain"
+                  src="c1-assets/dog-cartoon.png"
+                  alt="Dog Cartoon"
+                />
+              </div>
+              <!-- text -->
+              <h4 class="card-title text-[1.25rem] mb-1 items-center mt-5 mr-1">
+                Dog
+              </h4>
+              <p class="sora-font items-center">3 items</p>
+            </div>
+          </div>
+          <!-- card-5 -->
+          <div
+            class="card bg-[#F9DF8A] w-[200px] h-[255px] shadow-sm rounded-2xl overflow-x-hidden relative"
+          >
+            <div
+              class="card-body flex flex-col items-center justify-center p-8"
+            >
+              <!-- image container -->
+              <div class="rounded-full bg-white">
+                <img
+                  class="w-full h-full p-5 object-contain"
+                  src="c1-assets/dog-cartoon.png"
+                  alt="Dog Cartoon"
+                />
+              </div>
+              <!-- text -->
+              <h4 class="card-title text-[1.25rem] mb-1 items-center mt-5 mr-1">
+                Dog
+              </h4>
+              <p class="sora-font items-center">3 items</p>
+            </div>
+          </div>
+          <!-- card-6 -->
+          <div
+            class="card bg-[#F9DF8A] w-[200px] h-[255px] shadow-sm rounded-2xl overflow-x-hidden relative"
+          >
+            <div
+              class="card-body flex flex-col items-center justify-center p-8"
+            >
+              <!-- image container -->
+              <div class="rounded-full bg-white">
+                <img
+                  class="w-full h-full p-5 object-contain"
+                  src="c1-assets/dog-cartoon.png"
+                  alt="Dog Cartoon"
+                />
+              </div>
+              <!-- text -->
+              <h4 class="card-title text-[1.25rem] mb-1 items-center mt-5 mr-1">
+                Dog
+              </h4>
+              <p class="sora-font items-center">3 items</p>
+            </div>
+          </div>
+        </div>
+        <!-- !\\Card section\\ -->
+      </section>
+      <!-- !Browse Categories -->
     </header>
     <main></main>
     <footer></footer>
